@@ -50,9 +50,10 @@ class PokemonDetailVC: UIViewController {
                 self.speciesLabel.text = self.pokemonData?.name?.capitalized
                 self.heightLabel.text = "\(height)"
                 self.weightLabel.text = "\(weight)"
-                self.abilitiesLabel.text = (self.pokemonData?.abilities?[0].ability?.name ?? "") + (self.pokemonData?.abilities?[1].ability?.name ?? "")
-                self.typeLabel.text = self.pokemonData?.types?[0].type?.name?.capitalized
                 self.pokemonImg.setImageUrl(imageUrl: "https://cdn.traction.one/pokedex/pokemon/\(self.pokemonId).png")
+                self.typeLabel.text = self.pokemonData?.types?[0].type?.name?.capitalized
+                guard let ability1 = self.pokemonData?.abilities?[0].ability?.name else { return self.abilitiesLabel.text = "Unknown"}
+                self.abilitiesLabel.text = ability1 
             }
         }
     }
