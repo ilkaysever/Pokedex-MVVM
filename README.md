@@ -1,4 +1,4 @@
-# Pokedex-MVVM!
+# Pokedex-MVVM
 Hello everyone!
 I want to share with you my Pokedex-MVVM Trial App.
 <br>
