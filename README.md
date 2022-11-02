@@ -7,8 +7,8 @@ I tried to develop this application by adhering to the following items.
 - MVVM Design
 - UIKit
 - Tableview
-- Custom TableViewCell
-- CollectionView
+- CustomTableViewCell
+- Netrowk Manager
 - BaseNavigationController
 - Alamofire
 - Kingfisher
