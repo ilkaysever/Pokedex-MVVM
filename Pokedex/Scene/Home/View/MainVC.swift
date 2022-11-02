@@ -20,11 +20,6 @@ class MainVC: UIViewController {
         configureTableView()
         getPokemonListRequest()
         
-//        let yourBackImage = UIImage(named: "back_icon")
-//        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
-//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
-//        self.navigationController?.navigationBar.tintColor = .white
-//        self.navigationItem.backButtonTitle = ""
     }
     
     private func getPokemonListRequest() {

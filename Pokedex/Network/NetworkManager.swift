@@ -9,12 +9,7 @@ import Alamofire
 
 class NetworkManager {
     
-    static let shared = NetworkManager()
-    
     static func request<T: Codable>(type: T.Type, url: String, method: HTTPMethod, completion: @escaping((Result<T, ErrorTypes>) -> ())) {
-        
-        //fetchNewsData(category: String?, query: String?, completion: @escaping(NewsModel) -> Void, error: @escaping(ResponseError) -> Void)
-        
         AF.request(url, method: method).response { response in
             
             switch response.result {
@@ -25,20 +20,7 @@ class NetworkManager {
             case .failure(_):
                 completion(.failure(.unknownError))
             }
-            
-//            switch response.result {
-//            case .success:
-//                do {
-//                    let newsData = try JSONDecoder().decode(NewsModel.self, from: response.data!)
-//                    completion(newsData)
-//                } catch {
-//                    debugPrint("********************* Error Decoding = \(error.localizedDescription) *********************")
-//                }
-//            case .failure(let error):
-//                debugPrint("********************* \(error.localizedDescription) *********************")
-//            }
         }
-        
         
     }
     

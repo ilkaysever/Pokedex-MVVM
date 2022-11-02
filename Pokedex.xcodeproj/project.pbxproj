@@ -185,7 +185,6 @@
 			children = (
 				6BDFC30F291154ED00A9BA26 /* Network */,
 				6BDFC30A2911548200A9BA26 /* Scene */,
-				6BDFC30B291154C900A9BA26 /* ViewModel */,
 				6BDFC30C291154D300A9BA26 /* Base */,
 				6BDFC30D291154D900A9BA26 /* Helpers */,
 				6BDFC30E291154E000A9BA26 /* Extensions */,
@@ -205,13 +204,6 @@
 				6BB3073A29116A8C00BEEDA8 /* ReusableCells */,
 			);
 			path = Scene;
-			sourceTree = "<group>";
-		};
-		6BDFC30B291154C900A9BA26 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6BDFC30C291154D300A9BA26 /* Base */ = {
@@ -586,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilkaysever.pokedex.Pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilkaysever.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -616,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilkaysever.pokedex.Pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilkaysever.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
