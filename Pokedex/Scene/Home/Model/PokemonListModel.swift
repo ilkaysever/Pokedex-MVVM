@@ -5,13 +5,15 @@
 //  Created by İlkay Sever on 1.11.2022.
 //
 
-struct PokemonListModel: Codable {
+typealias PokemonListModel = [PokemonListModelElement]
+
+struct PokemonListModelElement: Codable {
     var id: Int?
     var name: String?
     var pokedexNumber: Int?
     var type1: String?
     var type2: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name
