@@ -50,7 +50,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UP2-E4-KBg" secondAttribute="trailing" id="zCm-cr-owV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZQs-OV-Aed"/>
+                    <navigationItem key="navigationItem" id="ZQs-OV-Aed">
+                        <barButtonItem key="backBarButtonItem" title=" " id="eSg-0U-VjI"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundImg" destination="42U-1O-jH2" id="4Rx-tc-r4w"/>
                         <outlet property="tableView" destination="UP2-E4-KBg" id="Pp3-lZ-rif"/>
@@ -61,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1036" y="109.35960591133005"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="48i-7D-Fx0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VGm-Jy-bz4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VGm-Jy-bz4" customClass="BaseNavigationController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6iF-an-MoT">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>

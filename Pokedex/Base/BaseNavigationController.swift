@@ -2,7 +2,7 @@
 //  BaseNavigationController.swift
 //  Pokedex
 //
-//  Created by İlkay Sever on 2.11.2022.
+//  Created by İlkay Sever on 1.11.2022.
 //
 
 import UIKit
@@ -16,11 +16,19 @@ class BaseNavigationController: UINavigationController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
+        .darkContent
+    }
+    
+    func backButton() {
+        let yourBackImage = UIImage(named: "back_icon")
+        self.navigationItem.backButtonTitle = ""
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     func setNavigationBar() {
-        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().barTintColor = .clear
         UINavigationBar.appearance().backgroundColor = .clear
         view.backgroundColor = .clear

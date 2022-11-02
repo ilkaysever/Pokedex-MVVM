@@ -20,6 +20,11 @@ class MainVC: UIViewController {
         configureTableView()
         getPokemonListRequest()
         
+//        let yourBackImage = UIImage(named: "back_icon")
+//        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+//        self.navigationController?.navigationBar.tintColor = .white
+//        self.navigationItem.backButtonTitle = ""
     }
     
     private func getPokemonListRequest() {
@@ -58,7 +63,6 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        debugPrint(indexPath.row)
         let nextVC = PokemonDetailVC()
         nextVC.pokemonId = pokemonListVM.getPokemonList()?[indexPath.row].id ?? 0
         navigationController?.pushViewController(nextVC, animated: true)

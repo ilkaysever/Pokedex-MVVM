@@ -35,22 +35,13 @@ class PokemonListCell: UITableViewCell, ReusableView, NibLoadableView {
     }
     
     func configurePokemonCell(pokemonData: PokemonListModelElement?) {
-        guard let pokemonId = pokemonData?.id else { return }
+        guard let pokemonId = pokemonData?.id,
+        let pokemonIndex = pokemonData?.pokedexNumber else { return }
         let imgUrl = "https://cdn.traction.one/pokedex/pokemon/\(pokemonId).png"
         pokemonImg.setImageUrl(imageUrl: imgUrl)
         pokemonName.text = pokemonData?.name
         containerView.backgroundColor = Colors.shared.getColor(type: pokemonData?.type1 ?? "")
-        if pokemonData?.type1 != "" && pokemonData?.type2 != "" {
-            typeView.isHidden = false
-            typeLabel.text = pokemonData?.type1
-            abilityView.isHidden = false
-            abilityLabel.text = pokemonData?.type2
-        } else if pokemonData?.type1 != "" && pokemonData?.type2 == "" {
-            typeView.isHidden = false
-            typeLabel.text = pokemonData?.type1
-            abilityView.isHidden = false
-            abilityView.backgroundColor = .clear
-            abilityLabel.text = pokemonData?.type2
-        }
+        typeLabel.text = pokemonData?.type1?.capitalized
+        abilityLabel.text = "#" + "\(pokemonIndex)"
     }
 }
